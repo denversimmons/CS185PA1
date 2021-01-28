@@ -4,7 +4,7 @@
 
 .grid-container{
     display: grid;
-    grid-template-columns: 100px 100px 100px 100px;
+    grid-template-columns: 100px 100px 100px 100px 100px;
     background-color: black;
     padding: 10px;
 }
@@ -33,7 +33,10 @@
 .column img{
     margin-top: 4px;
     vertical-align: middle;
-    width: 100%;
+}
+
+.column img > img:hover{
+    width: 200%
 }
 
 .column iframe{
