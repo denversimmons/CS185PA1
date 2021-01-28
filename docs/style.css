@@ -4,7 +4,7 @@
 
 .grid-container{
     display: grid;
-    grid-template-columns: 100px 100px 100px 100px;
+    grid-template-columns: 100px 100px 100px 100px 100px;
     background-color: black;
     padding: 10px;
 }
@@ -18,14 +18,31 @@
     font-family: 'Times New Roman', Times, serif;
 }
 
-.grid-container-images{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    padding: 10px;
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 2px;
 }
 
-.grid-item-images{
-    padding: 10px;
+.column{
+    flex: 24%;
+    max-width: 24%;
+    padding: 0 2px;
+}
+
+.column img{
+    margin-top: 4px;
+    vertical-align: middle;
+}
+
+.column img > img:hover{
+    width: 200%
+}
+
+.column iframe{
+    margin-top: 4px;
+    vertical-align: middle;
+    width: 100%;
 }
 
 .grid-container-table{
@@ -43,3 +60,18 @@
     text-align: center;
     font-family: 'Times New Roman', Times, serif;
 }
+
+@media screen and (max-width: 800px) {
+    .column {
+      flex: 50%;
+      max-width: 50%;
+    }
+  }
+  
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .column {
+      flex: 100%;
+      max-width: 100%;
+    }
+  }
